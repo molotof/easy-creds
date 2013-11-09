@@ -49,7 +49,7 @@ trap f_Quit 2
 ##################################################
 f_isxrunning(){
 # Check to see if X is running
-if [ -z $(pidof X) ] && [ -z $(pidof Xorg) ]; then
+if [ -z $(pidof X) ] && [ -z $(pidof Xorg) ] && [ -z $(pidof Xtightvnc) ]; then #CCCP-82060 fix
 	isxrunning=
 else
 	isxrunning=1
